@@ -8,12 +8,16 @@ namespace work_1_var_9
 {
     public class User
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
-        public User(string _name,string _pass) {
-            this.Name = _name;
-            this.Password = _pass;
-            
+        public User(string name,string password) { 
+            this.Name = name;
+            this.Password = password;
+        }   
+        public override string ToString()
+        {
+            return $"{Name}+ {Password}";
         }
     }
 }

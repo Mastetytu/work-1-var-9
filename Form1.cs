@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,12 +25,12 @@ namespace work_1_var_9
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        public void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -44,27 +45,28 @@ namespace work_1_var_9
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void button3_Click(object sender, EventArgs e)
         {
 
             Form2 form = new Form2();
-            form.Show();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                string name, password;
+                name = form.textBox1.Text;
+                password = form.textBox2.Text;
+                User users = new User(name,password);
+                SingleTon.DB.Users.Add(users);
+                SingleTon.DB.ToString();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Apx.listChanged += SetListBox;
-            SetListBox();
+            
 
     
         }
-    public void SetListBox() 
-        {
-            AppContext.DataSource = null;
-            //AppContext.DataSource = Apx.user;
-            
 
-        }
 
        
     }

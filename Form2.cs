@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,28 +8,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using work_1_var_9;
 namespace work_1_var_9
 {
     public partial class Form2 : Form
     {
-        AppContext Apx;
+       
         public Form2()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        public void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        public void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -38,12 +39,11 @@ namespace work_1_var_9
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.Name = textBox1.Text;
-            if(textBox2.Text== textBox3.Text) user.Password = textBox2.Text;
-            if (!string.IsNullOrWhiteSpace(textBox1.Text)) if(!string.IsNullOrWhiteSpace(textBox2.Text)) Apx.Add(user);
+            
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }
