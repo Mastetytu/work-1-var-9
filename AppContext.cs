@@ -25,7 +25,7 @@ namespace work_1_var_9
         }
         public void Add(User user) 
         {
-
+           
             Users.Add(user);
             File.WriteAllText(fileName, Users.ToString());
         }

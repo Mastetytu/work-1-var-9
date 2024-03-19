@@ -9,7 +9,6 @@ namespace work_1_var_9
 {
     public static class SingleTon
     {
-        public static User User{ get; set; }
         public static AppContext DB { get; set; }
         static SingleTon()
         {
