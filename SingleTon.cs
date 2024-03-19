@@ -13,7 +13,7 @@ namespace work_1_var_9
         public static AppContext DB { get; set; }
         static SingleTon()
         {
-            DB = new AppContext("Accounts.txt");
+            DB = new AppContext("Accounts.txt", File);
         }
     }
 }

@@ -12,9 +12,38 @@ namespace work_1_var_9
 {
     public partial class Form2 : Form
     {
+        AppContext Apx;
         public Form2()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Name = textBox1.Text;
+            if(textBox2.Text== textBox3.Text) user.Password = textBox2.Text;
+            if (!string.IsNullOrWhiteSpace(textBox1.Text)) if(!string.IsNullOrWhiteSpace(textBox2.Text)) Apx.Add(user);
         }
     }
 }

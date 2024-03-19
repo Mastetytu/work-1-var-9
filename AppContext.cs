@@ -12,15 +12,15 @@ namespace work_1_var_9
     {
         public static List<User> user = new List<User>();
         public delegate void OnListChanged();
-        private string fileName;
+        public string fileName;
         public OnListChanged listChanged;
 
-        public static List<User> DataSource { get; set; }
+        //public static List<User> DataSource { get; set; }
 
         public AppContext(string fileName) 
         {
             this.fileName = fileName;
-            user = File.ReadAllText(fileName).Split().Select(m => m.Value).ToList();
+            user = File.ReadAllText(fileName).ToList();
 
         }
         public void Add(User stroka) 

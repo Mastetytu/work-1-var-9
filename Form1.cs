@@ -13,7 +13,7 @@ namespace work_1_var_9
 {
     public partial class Form1 : Form
     {
-        AppContext Apx;
+       
         public Form1()
         {
             InitializeComponent();
@@ -36,10 +36,7 @@ namespace work_1_var_9
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.Name = text_USER.Text;
-            user.Password = text_Password.Text;
-            if (!string.IsNullOrWhiteSpace(text_USER.Text)) Apx.Add(user);
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -69,11 +66,7 @@ namespace work_1_var_9
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form2 form = new Form2();
-            form.Show();
-        }
+       
     }
 
 }

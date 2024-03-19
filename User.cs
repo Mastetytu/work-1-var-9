@@ -8,9 +8,12 @@ namespace work_1_var_9
 {
     public class User
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
-        
+        public User(string _name,string _pass) {
+            this.Name = _name;
+            this.Password = _pass;
+            
+        }
     }
 }
