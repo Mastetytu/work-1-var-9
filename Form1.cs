@@ -54,9 +54,8 @@ namespace work_1_var_9
                 string name, password;
                 name = form.textBox1.Text;
                 password = form.textBox2.Text;
-                User users = new User(name,password);
+                User users = new User(name.ToString(), password.ToString());
                 SingleTon.DB.Users.Add(users);
-                SingleTon.DB.ToString();
             }
         }
 

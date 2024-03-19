@@ -12,9 +12,9 @@ namespace work_1_var_9
     
     public class AppContext
     {
-        public  List<User> Users {  get; set; }
-        
-        public string fileName {get;set;}
+        public List<User> Users = new List<User>();
+
+        public string fileName;
 
         
         public AppContext(string fileName)
@@ -23,10 +23,10 @@ namespace work_1_var_9
             var user1  = File.ReadAllText(fileName).ToList();
             
         }
-        public void Add(User stroka) 
+        public void Add(User user) 
         {
 
-            Users.Add(stroka);
+            Users.Add(user);
             File.WriteAllText(fileName, Users.ToString());
         }
     }
