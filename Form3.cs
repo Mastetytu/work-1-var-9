@@ -19,37 +19,39 @@ namespace work_1_var_9
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
+            textBox1.ReadOnly = false;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            textBox2.ReadOnly = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            textBox3.ReadOnly = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+           Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

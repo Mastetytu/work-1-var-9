@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using work_1_var_9;
 
 namespace work_1_var_9
@@ -37,7 +38,18 @@ namespace work_1_var_9
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            var user = SingleTon.DB.Users.Where(u => u.Name == text_USER.Text && u.Password == text_Password.Text).FirstOrDefault();
+            if (user == null)
+            {
+                MessageBox.Show("Пользователь не найден!");
+                return;
+            }
+            SingleTon.User = user;
+            Form form = new Form3();
+            form.Show();
+            Hide();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)

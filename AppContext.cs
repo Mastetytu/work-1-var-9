@@ -20,7 +20,7 @@ namespace work_1_var_9
         public AppContext(string fileName)
         {
             this.fileName = fileName;
-            var user1  = File.ReadAllText(fileName).ToList();
+            File.ReadAllText(fileName).ToList();
             
         }
         public void Add(User user) 
